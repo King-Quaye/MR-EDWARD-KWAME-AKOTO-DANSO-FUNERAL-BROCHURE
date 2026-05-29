@@ -144,6 +144,44 @@ body{background:#1A1108;font-family:'Cormorant Garamond',Georgia,serif;color:var
 /* Two-col */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
 
+@media (max-width: 768px) {
+  html{font-size:15px}
+  body{padding-bottom:24px}
+  .booklet{max-width:100%;margin:0 auto;background:var(--cream);padding:0 12px}
+  .page, .cover, .back-cover{min-height:auto;padding:30px 16px}
+  .page::before{inset:10px}
+  .page-header{margin-bottom:24px}
+  .section-title{font-size:1.45rem}
+  .section-label{font-size:0.58rem;letter-spacing:0.45em}
+  .detail-grid,.clergy-list,.gallery-grid,.two-col{grid-template-columns:1fr}
+  .portrait-float{float:none;width:100%;margin:0 0 22px}
+  .portrait-float img{width:100%}
+  .mass-item{flex-direction:column;align-items:flex-start;gap:6px}
+  .tribute-header{flex-direction:column;align-items:flex-start;gap:12px}
+  .tribute-icon{width:36px;height:36px}
+  .tribute-title{font-size:1.15rem}
+  .tribute-scripture{font-size:0.92rem;padding-left:12px}
+  .tribute-text{font-size:1.05rem;line-height:2}
+  .hymn-title{font-size:0.78rem}
+  .hymn-verse,.hymn-chorus{font-size:0.95rem}
+  .family-names,.detail-card-value{font-size:1rem}
+  .cover-top-band,.cover-bottom-band{padding:24px 16px}
+  .cover-photo-ring{width:220px;height:260px}
+}
+
+@media (max-width: 520px) {
+  html{font-size:14px}
+  .page, .cover, .back-cover{padding:22px 12px}
+  .section-title{font-size:1.3rem}
+  .section-label{font-size:0.55rem;letter-spacing:0.4em}
+  .cover-called{font-size:0.65rem}
+  .cover-scripture{padding:0 16px}
+  .cover-photo-ring{width:100%;height:auto;aspect-ratio:3/4}
+  .cover-name-block{padding:0 16px}
+  .page::before{inset:6px}
+  .cover-border-outer,.cover-border-inner{inset:8px}
+}
+
 @media print{
   body{background:white}
   .page,.cover,.back-cover{page-break-after:always}
@@ -275,7 +313,46 @@ body{background:#1A1108;font-family:'Cormorant Garamond',Georgia,serif;color:var
   </div>
 </div>
 
-<!-- PAGE 3: ORDER OF MASS -->
+<!-- PAGE 3: OFFICIATING CLERGY -->
+<div class="page page-dark">
+  <div class="page-header">
+    <div class="section-label">Ministers of the Sacrament</div>
+    <div class="section-title">Officiating Clergy</div>
+    <div class="diamond-ornament" style="color:var(--gold-light)"><div class="diamond-center" style="background:var(--gold-light)"></div></div>
+  </div>
+  <div class="clergy-list">
+    <div class="clergy-card main" style="border-color:var(--gold);background:rgba(184,148,74,0.12)">
+      <div class="clergy-role" style="color:var(--gold-light)">Main Celebrant</div>
+      <div class="clergy-name" style="color:var(--gold-pale)">V. Rev. Fr. Augustine Frempong</div>
+    </div>
+    <div class="clergy-card" style="border-color:var(--border-gold);background:rgba(184,148,74,0.05)">
+      <div class="clergy-role">Concelebrant</div>
+      <div class="clergy-name" style="color:var(--cream)">Rev. Fr. Frederick Kwaku Abu</div>
+    </div>
+    <div class="clergy-card" style="border-color:var(--border-gold);background:rgba(184,148,74,0.05)">
+      <div class="clergy-role">Concelebrant</div>
+      <div class="clergy-name" style="color:var(--cream)">Rev. Fr. Richard Sam-Agyekum</div>
+    </div>
+    <div class="clergy-card" style="border-color:var(--border-gold);background:rgba(184,148,74,0.05)">
+      <div class="clergy-role">Catechist / MC</div>
+      <div class="clergy-name" style="color:var(--cream)">Catechist Michael Adu</div>
+    </div>
+    <div class="clergy-card" style="border-color:var(--border-gold);background:rgba(184,148,74,0.05)">
+      <div class="clergy-role">Choir</div>
+      <div class="clergy-name" style="color:var(--cream)">Mass Choir</div>
+    </div>
+  </div>
+  <hr class="rule-gold" style="margin:40px 0;opacity:0.5">
+  <div style="text-align:center;max-width:500px;margin:0 auto">
+    <div class="section-label" style="margin-bottom:16px">A Word of Comfort</div>
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:var(--cream);line-height:2;margin-bottom:12px">"I am the resurrection and the life. He who believes in me, though he were dead, yet shall he live."</p>
+    <p style="font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.5em;color:var(--gold);margin-bottom:40px">John 11:25</p>
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:var(--cream);line-height:2;margin-bottom:12px">"Precious in the sight of the Lord is the death of His faithful servant."</p>
+    <p style="font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.5em;color:var(--gold)">Psalm 116:15</p>
+  </div>
+</div>
+
+<!-- PAGE 4: ORDER OF MASS -->
 <div class="page">
   <div class="page-header">
     <div class="section-label">The Sacred Celebration</div>
@@ -335,45 +412,6 @@ body{background:#1A1108;font-family:'Cormorant Garamond',Georgia,serif;color:var
     <div class="mass-item"><span class="mass-bullet">◆</span><span class="mass-text">Final Prayers &amp; Blessing</span></div>
     <div class="mass-item"><span class="mass-bullet">◆</span><span class="mass-text">Final Hymn</span></div>
     <div class="mass-item"><span class="mass-bullet">◆</span><span class="mass-text">Vote of Thanks <span class="mass-sub">— Family</span></span></div>
-  </div>
-</div>
-
-<!-- PAGE 4: OFFICIATING CLERGY -->
-<div class="page page-dark">
-  <div class="page-header">
-    <div class="section-label">Ministers of the Sacrament</div>
-    <div class="section-title">Officiating Clergy</div>
-    <div class="diamond-ornament" style="color:var(--gold-light)"><div class="diamond-center" style="background:var(--gold-light)"></div></div>
-  </div>
-  <div class="clergy-list">
-    <div class="clergy-card main" style="border-color:var(--gold);background:rgba(184,148,74,0.12)">
-      <div class="clergy-role" style="color:var(--gold-light)">Main Celebrant</div>
-      <div class="clergy-name" style="color:var(--gold-pale)">V. Rev. Fr. Augustine Frempong</div>
-    </div>
-    <div class="clergy-card" style="border-color:var(--border-gold);background:rgba(184,148,74,0.05)">
-      <div class="clergy-role">Concelebrant</div>
-      <div class="clergy-name" style="color:var(--cream)">Rev. Fr. Frederick Kwaku Abu</div>
-    </div>
-    <div class="clergy-card" style="border-color:var(--border-gold);background:rgba(184,148,74,0.05)">
-      <div class="clergy-role">Concelebrant</div>
-      <div class="clergy-name" style="color:var(--cream)">Rev. Fr. Richard Sam-Agyekum</div>
-    </div>
-    <div class="clergy-card" style="border-color:var(--border-gold);background:rgba(184,148,74,0.05)">
-      <div class="clergy-role">Catechist / MC</div>
-      <div class="clergy-name" style="color:var(--cream)">Catechist Michael Adu</div>
-    </div>
-    <div class="clergy-card" style="border-color:var(--border-gold);background:rgba(184,148,74,0.05)">
-      <div class="clergy-role">Choir</div>
-      <div class="clergy-name" style="color:var(--cream)">Mass Choir</div>
-    </div>
-  </div>
-  <hr class="rule-gold" style="margin:40px 0;opacity:0.5">
-  <div style="text-align:center;max-width:500px;margin:0 auto">
-    <div class="section-label" style="margin-bottom:16px">A Word of Comfort</div>
-    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:var(--cream);line-height:2;margin-bottom:12px">"I am the resurrection and the life. He who believes in me, though he were dead, yet shall he live."</p>
-    <p style="font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.5em;color:var(--gold);margin-bottom:40px">John 11:25</p>
-    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:var(--cream);line-height:2;margin-bottom:12px">"Precious in the sight of the Lord is the death of His faithful servant."</p>
-    <p style="font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.5em;color:var(--gold)">Psalm 116:15</p>
   </div>
 </div>
 
