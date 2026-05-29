@@ -35,24 +35,23 @@ body{background:#1A1108;font-family:'Cormorant Garamond',Georgia,serif;color:var
 .cover-corner.bl{bottom:10px;left:10px;border-bottom:2px solid var(--gold);border-left:2px solid var(--gold)}
 .cover-corner.br{bottom:10px;right:10px;border-bottom:2px solid var(--gold);border-right:2px solid var(--gold)}
 .cover-top-band{width:100%;padding:52px 60px 20px;text-align:center;position:relative;z-index:2}
-.cover-called{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.5em;color:var(--gold-light);text-transform:uppercase;margin-bottom:10px}
+.cover-called{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.5em;color:var(--gold-light);font-weight:700;text-transform:uppercase;margin-bottom:10px}
 .cover-called-rule{width:200px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto 16px}
-.cover-called-glory{font-family:'Cinzel Decorative',serif;font-size:2.2rem;color:var(--gold);letter-spacing:0.08em;text-shadow:0 2px 20px rgba(184,148,74,0.4);line-height:1}
+.cover-called-glory{font-family:'Cinzel Decorative',serif;font-size:2.2rem;color:var(--gold);letter-spacing:0.08em;font-weight:700;text-shadow:0 2px 20px rgba(184,148,74,0.4);line-height:1}
 .cover-photo-frame{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 0}
-.cover-photo-ring{width:300px;height:360px;position:relative}
-.cover-photo-ring::before{content:'';position:absolute;inset:-12px;border:1.5px solid var(--gold);clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)}
-.cover-photo-ring::after{content:'';position:absolute;inset:-6px;border:1px solid rgba(184,148,74,0.4);clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)}
-.cover-photo{width:100%;height:100%;object-fit:cover;object-position:center top;clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);filter:sepia(10%) contrast(1.08);display:block}
+.cover-photo-ring{width:300px;height:360px;position:relative;border-radius:26px;overflow:hidden;box-shadow:0 22px 45px rgba(0,0,0,0.18);border:1px solid rgba(0,0,0,0.08);background:#fff}
+.cover-photo-ring::before,.cover-photo-ring::after{display:none}
+.cover-photo{width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:26px;filter:sepia(10%) contrast(1.08);display:block;clip-path:none}
 .cover-name-block{text-align:center;position:relative;z-index:2;padding:0 60px;margin-bottom:18px}
-.cover-in-memoriam{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:1.05rem;color:var(--gold-light);letter-spacing:0.3em;text-transform:uppercase;margin-bottom:8px}
-.cover-title{font-family:'Cinzel',serif;font-size:0.85rem;letter-spacing:0.4em;color:rgba(184,148,74,0.8);text-transform:uppercase;margin-bottom:4px}
+.cover-in-memoriam{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:1.05rem;color:var(--gold-light);letter-spacing:0.3em;text-transform:uppercase;margin-bottom:8px}
+.cover-title{font-family:'Cinzel',serif;font-size:0.85rem;letter-spacing:0.4em;color:rgba(184,148,74,0.9);font-weight:700;text-transform:uppercase;margin-bottom:4px}
 .cover-firstname{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:3.8rem;color:#FFF8EC;line-height:1;letter-spacing:0.02em}
 .cover-middlename{font-family:'Cinzel',serif;font-weight:400;font-size:1.05rem;color:var(--gold-light);letter-spacing:0.4em;margin:2px 0 6px}
 .cover-surname{font-family:'Cinzel',serif;font-weight:700;font-size:2.6rem;color:var(--gold);letter-spacing:0.15em;line-height:1.2;text-shadow:0 0 40px rgba(184,148,74,0.5)}
-.cover-dates{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:1.1rem;color:rgba(212,175,106,0.8);letter-spacing:0.35em;margin-top:6px}
+.cover-dates{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.1rem;color:rgba(212,175,106,0.85);letter-spacing:0.35em;margin-top:6px}
 .cover-scripture{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.95rem;color:rgba(212,175,106,0.65);text-align:center;max-width:420px;line-height:1.8;padding:0 60px;position:relative;z-index:2}
 .cover-bottom-band{width:100%;padding:16px 60px 48px;text-align:center;position:relative;z-index:2}
-.cover-event-block{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.3em;color:rgba(184,148,74,0.7);text-transform:uppercase;line-height:2}
+.cover-event-block{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.3em;color:rgba(184,148,74,0.85);font-weight:700;text-transform:uppercase;line-height:2}
 
 /* PAGES */
 .page{min-height:1122px;padding:64px 72px;position:relative;background:var(--cream);page-break-after:always}
@@ -61,8 +60,8 @@ body{background:#1A1108;font-family:'Cormorant Garamond',Georgia,serif;color:var
 .page::before{content:'';position:absolute;inset:20px;border:1px solid rgba(184,148,74,0.2);pointer-events:none}
 .page-dark::before{border-color:rgba(184,148,74,0.3)}
 .page-header{text-align:center;margin-bottom:32px}
-.section-label{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.55em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
-.section-title{font-family:'Cinzel',serif;font-size:1.65rem;font-weight:600;color:var(--text-dark);letter-spacing:0.08em;line-height:1.3;margin-bottom:4px}
+.section-label{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.55em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:6px}
+.section-title{font-family:'Cinzel',serif;font-size:1.65rem;font-weight:700;color:var(--text-dark);letter-spacing:0.08em;line-height:1.3;margin-bottom:4px}
 .page-dark .section-title{color:var(--gold-pale)}
 .page-dark .section-label{color:var(--gold-light)}
 
@@ -70,14 +69,14 @@ body{background:#1A1108;font-family:'Cormorant Garamond',Georgia,serif;color:var
 .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:28px 0}
 .detail-card{border:1px solid var(--border-gold);background:rgba(184,148,74,0.04);padding:18px 20px;position:relative}
 .detail-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--gold)}
-.detail-card-label{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.5em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.detail-card-label{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.5em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:6px}
 .detail-card-value{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;color:var(--text-dark);line-height:1.5}
 .detail-card-sub{font-size:0.88rem;color:var(--text-muted);margin-top:2px;font-style:italic}
 .detail-card.full{grid-column:1/-1}
 
 /* Order of Mass */
 .mass-part{margin-bottom:28px}
-.mass-part-title{font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.5em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid var(--border-gold)}
+.mass-part-title{font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.5em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid var(--border-gold)}
 .mass-item{display:flex;align-items:baseline;gap:10px;padding:5px 0;border-bottom:1px dashed rgba(184,148,74,0.12)}
 .mass-bullet{color:var(--gold);font-size:0.7rem;flex-shrink:0}
 .mass-text{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-dark);line-height:1.6}
@@ -87,7 +86,7 @@ body{background:#1A1108;font-family:'Cormorant Garamond',Georgia,serif;color:var
 /* Clergy */
 .clergy-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
 .clergy-card{text-align:center;padding:20px 16px;border:1px solid var(--border-gold);background:rgba(184,148,74,0.03)}
-.clergy-role{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.5em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.clergy-role{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.5em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px}
 .clergy-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;color:var(--text-dark)}
 .clergy-card.main{grid-column:1/-1;background:rgba(184,148,74,0.07)}
 .clergy-card.main .clergy-name{font-size:1.35rem}
@@ -106,7 +105,7 @@ body{background:#1A1108;font-family:'Cormorant Garamond',Georgia,serif;color:var
 .tribute-header{display:flex;align-items:center;gap:16px;margin-bottom:16px}
 .tribute-icon{width:40px;height:40px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;transform:rotate(45deg);background:rgba(184,148,74,0.06)}
 .tribute-icon-inner{transform:rotate(-45deg);color:var(--gold);font-size:1rem}
-.tribute-from{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.5em;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
+.tribute-from{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.5em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:2px}
 .tribute-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--text-dark)}
 .tribute-scripture{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.95rem;color:var(--text-muted);border-left:3px solid var(--gold);padding:8px 0 8px 16px;margin-bottom:14px;line-height:1.7}
 .tribute-scripture span{display:block;font-size:0.85rem;color:var(--gold-dark);margin-top:4px}
@@ -122,12 +121,12 @@ body{background:#1A1108;font-family:'Cormorant Garamond',Georgia,serif;color:var
 .gallery-item.wide{grid-column:span 2}
 .gallery-item.wide img{aspect-ratio:16/9;object-position:center}
 .gallery-item::after{content:'';position:absolute;inset:0;border:1px solid rgba(184,148,74,0.3);pointer-events:none}
-.gallery-caption{font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.35em;text-transform:uppercase;color:rgba(184,148,74,0.85);text-align:center;padding-top:5px}
+.gallery-caption{font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.35em;text-transform:uppercase;color:rgba(184,148,74,0.95);font-weight:700;text-align:center;padding-top:5px}
 .gallery-hero{width:100%;height:400px;object-fit:cover;object-position:center top;filter:sepia(8%) contrast(1.06);margin-bottom:4px;display:block}
 
 /* Hymns */
 .hymn-block{margin-bottom:24px}
-.hymn-title{font-family:'Cinzel',serif;font-size:0.8rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;padding-bottom:5px;border-bottom:1px solid var(--border-gold)}
+.hymn-title{font-family:'Cinzel',serif;font-size:0.8rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px;padding-bottom:5px;border-bottom:1px solid var(--border-gold)}
 .hymn-number{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.4em;color:var(--text-muted);margin-bottom:5px}
 .hymn-verse{font-family:'Cormorant Garamond',serif;font-size:0.97rem;line-height:1.85;color:var(--text-dark);margin-bottom:8px}
 .hymn-chorus{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.97rem;line-height:1.85;color:var(--text-muted);padding:8px 0 8px 20px;border-left:2px solid var(--gold);margin-bottom:8px}
@@ -712,8 +711,8 @@ body{background:#1A1108;font-family:'Cormorant Garamond',Georgia,serif;color:var
   <div class="cover-corner tl"></div><div class="cover-corner tr"></div>
   <div class="cover-corner bl"></div><div class="cover-corner br"></div>
   <div style="font-size:3.5rem;color:var(--gold);margin-bottom:20px;opacity:0.8">✝</div>
-  <div style="font-family:'Cinzel Decorative',serif;font-size:1.5rem;color:var(--gold);letter-spacing:0.1em;margin-bottom:10px">In Loving Memory</div>
-  <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:2.6rem;color:#FFF8EC;line-height:1.2;margin-bottom:4px">Edward Kwame Akoto Danso</div>
+  <div style="font-family:'Cinzel Decorative',serif;font-size:1.5rem;color:var(--gold);letter-spacing:0.1em;margin-bottom:10px">Fare Thee Well</div>
+  <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:2.6rem;color:#FFF8EC;line-height:1.2;margin-bottom:4px">Mr. Edward Kwame Akoto Danso</div>
   <div style="font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.5em;color:rgba(212,175,106,0.7);margin-bottom:36px">8 · X · 1948 &nbsp;—&nbsp; 2 · XII · 2025</div>
   <div style="width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin-bottom:32px"></div>
   <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:rgba(212,175,106,0.75);max-width:460px;line-height:1.85;margin-bottom:10px">"I am the resurrection and the life. He who believes in me, though he were dead, yet shall he live — and whoever lives and believes in me shall never die."</p>
