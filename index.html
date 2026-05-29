@@ -147,13 +147,14 @@ body{background:#1A1108;font-family:'Cormorant Garamond',Georgia,serif;color:var
 @media (max-width: 768px) {
   html{font-size:15px}
   body{padding-bottom:24px}
-  .booklet{max-width:100%;margin:0 auto;background:var(--cream);padding:0 12px}
-  .page, .cover, .back-cover{min-height:auto;padding:30px 16px}
-  .page::before{inset:10px}
+  .booklet{max-width:100%;width:100%;margin:0 auto;background:var(--cream);padding:0 12px}
+  .page, .cover, .back-cover{width:100%;max-width:100%;min-height:auto;padding:30px 16px}
+  .page::before,.cover::before,.back-cover::before{inset:10px}
   .page-header{margin-bottom:24px}
   .section-title{font-size:1.45rem}
   .section-label{font-size:0.58rem;letter-spacing:0.45em}
   .detail-grid,.clergy-list,.gallery-grid,.two-col{grid-template-columns:1fr}
+  .detail-grid,.clergy-list,.gallery-grid,.two-col{gap:18px}
   .portrait-float{float:none;width:100%;margin:0 0 22px}
   .portrait-float img{width:100%}
   .mass-item{flex-direction:column;align-items:flex-start;gap:6px}
@@ -166,7 +167,8 @@ body{background:#1A1108;font-family:'Cormorant Garamond',Georgia,serif;color:var
   .hymn-verse,.hymn-chorus{font-size:0.95rem}
   .family-names,.detail-card-value{font-size:1rem}
   .cover-top-band,.cover-bottom-band{padding:24px 16px}
-  .cover-photo-ring{width:220px;height:260px}
+  .cover-photo-ring{width:100%;max-width:260px;height:auto}
+  .cover-border-outer,.cover-border-inner{inset:10px}
 }
 
 @media (max-width: 520px) {
@@ -176,10 +178,13 @@ body{background:#1A1108;font-family:'Cormorant Garamond',Georgia,serif;color:var
   .section-label{font-size:0.55rem;letter-spacing:0.4em}
   .cover-called{font-size:0.65rem}
   .cover-scripture{padding:0 16px}
-  .cover-photo-ring{width:100%;height:auto;aspect-ratio:3/4}
+  .cover-photo-ring{width:100%;height:auto;aspect-ratio:3/4;max-width:100%}
   .cover-name-block{padding:0 16px}
   .page::before{inset:6px}
   .cover-border-outer,.cover-border-inner{inset:8px}
+  .detail-grid,.clergy-list,.gallery-grid,.two-col{gap:14px}
+  .gallery-item,.hymn-block,.detail-card{width:100%}
+  .mass-item{width:100%}
 }
 
 @media print{
